@@ -106,9 +106,8 @@ nav.scrolled{background:rgba(6,13,23,.9);backdrop-filter:blur(20px);border-botto
 /* ─── ABOUT ─── */
 .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;margin-top:60px}
 .about-image-wrap{position:relative}
-.about-image-box{width:100%;aspect-ratio:1;background:var(--surface);border:1px solid var(--border);border-radius:24px;font-size:96px;position:relative;overflow:hidden}
+.about-image-box{width:100%;aspect-ratio:1;background:var(--surface);border:1px solid var(--border);border-radius:24px;display:flex;align-items:center;justify-content:center;font-size:96px;position:relative;overflow:hidden}
 .about-image-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(0,212,255,.08),transparent 60%)}
-.about-image{width: 100%;height: 100%;object-fit: contain;object-position: center;z-index: 1;}
 .about-corner{position:absolute;width:60px;height:60px;border-color:var(--accent);border-style:solid}
 .corner-tl{top:-1px;left:-1px;border-width:2px 0 0 2px;border-radius:4px 0 0 0}
 .corner-br{bottom:-1px;right:-1px;border-width:0 2px 2px 0;border-radius:0 0 4px 0}
@@ -363,17 +362,9 @@ body.is-admin #addSection{display:block}
         <div class="about-image-box">
           <div class="about-corner corner-tl"></div>
           <div class="about-corner corner-br"></div>
-          <span style="font-size:100px;filter:grayscale(0)">
-            
-          </span>
+          <img src="profile.jpeg" alt="Shiva Kumar" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:1">
         </div>
-        <div class="about-badge"><div class="about-image-wrap">
-        <div class="about-image-box">
-          <div class="about-corner corner-tl"></div>
-          <div class="about-corner corner-br"></div>
-          <img src="profile.jpeg"
-         alt="Shiva Profile"
-         class= "about-image">
+        <div class="about-badge">
           <div class="about-badge-num">2.7</div>
           <div class="about-badge-txt">Years in<br>Power BI</div>
         </div>
@@ -483,8 +474,7 @@ body.is-admin #addSection{display:block}
     <div class="sec-eyebrow">Experience</div>
     <div class="sec-title">Work <span>History</span></div>
   </div>
-  <div class="timeline reveal reveal-delay-1">  
-        </div>
+  <div class="timeline reveal reveal-delay-1">
     <div class="tl-item">
       <div class="tl-dot filled"></div>
       <div class="tl-date">Jan 2022 – Present · 2.7 years</div>
@@ -520,9 +510,9 @@ body.is-admin #addSection{display:block}
     <div class="sec-desc">Open to Power BI Developer and Data Analyst roles. Reach out via any channel below.</div>
   </div>
   <div class="reveal reveal-delay-1" style="display:flex;flex-wrap:wrap;gap:16px;margin-top:40px">
-    <a href="mailto:shivabolloju143@email.com" class="btn-primary">✉ Email Me</a>
-    <a href="https://www.linkedin.com/in/shiva-kumar-716895134/" target="_blank" rel="noopener" class="btn-outline">LinkedIn ↗</a>
-    <a href="https://github.com/shivabolloju" target="_blank" rel="noopener" class="btn-outline">GitHub ↗</a>
+    <a href="mailto:shiva@email.com" class="btn-primary">✉ Email Me</a>
+    <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener" class="btn-outline">LinkedIn ↗</a>
+    <a href="https://github.com/your-github" target="_blank" rel="noopener" class="btn-outline">GitHub ↗</a>
     <a href="#" onclick="downloadResume(event)" class="btn-green">↓ Download Resume</a>
   </div>
 </section>
@@ -659,7 +649,7 @@ document.querySelectorAll('.skills-section').forEach(el=>sio.observe(el));
 // ────────────────────────────────────────────
 // PASSWORD (SHA-256 of "admin" — change before deploy)
 // ────────────────────────────────────────────
-const HASH="cd7eafd4d0d9afdb9748cbd50ba78ff3ac09312b498b93ca9a985ff37e5b094b";
+const HASH="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918";
 let isAdmin=false;
 async function sha256(s){
   const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
