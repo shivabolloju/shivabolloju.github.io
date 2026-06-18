@@ -649,7 +649,7 @@ document.querySelectorAll('.skills-section').forEach(el=>sio.observe(el));
 // ────────────────────────────────────────────
 // PASSWORD (SHA-256 of "admin" — change before deploy)
 // ────────────────────────────────────────────
-const HASH="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918";
+const HASH="cd7eafd4d0d9afdb9748cbd50ba78ff3ac09312b498b93ca9a985ff37e5b094b";
 let isAdmin=false;
 async function sha256(s){
   const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
